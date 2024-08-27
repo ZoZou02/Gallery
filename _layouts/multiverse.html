@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "zh-CN" }}">
 
   {%- include head.html -%}
 
@@ -25,22 +25,25 @@
       </div>
 
       {%- include footer.html -%}
+      <div style="display: block;">
+        <script src="https://giscus.app/client.js"
+        data-repo="ZoZou02/gallery"
+        data-repo-id="R_kgDOMnrAtQ"
+        data-category="Show and tell"
+        data-category-id="DIC_kwDOMnrAtc4Ch9O7"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="noborder_gray"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+        </script>
+      </div>
 
-      <script src="https://giscus.app/client.js"
-      data-repo="ZoZou02/gallery"
-      data-repo-id="R_kgDOMnrAtQ"
-      data-category="Show and tell"
-      data-category-id="DIC_kwDOMnrAtc4Ch9O7"
-      data-mapping="pathname"
-      data-strict="0"
-      data-reactions-enabled="1"
-      data-emit-metadata="0"
-      data-input-position="top"
-      data-theme="noborder_gray"
-      data-lang="zh-CN"
-      crossorigin="anonymous"
-      async>
-</script>
+
 
     </div>
 
