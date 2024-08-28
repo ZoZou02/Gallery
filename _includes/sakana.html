@@ -15,7 +15,10 @@ bottom: 73px;
 right: 0;"></div>
 <script>
   function initSakanaWidget() {
-    new SakanaWidget({rod: false}).mount('#sakana-widget');
+    const wukong = SakanaWidget.getCharacter('chisato');
+    wukong.image = `https://github.com/ZoZou02/gallery/blob/master/assets/images/sakana/wukong1.png`;
+    SakanaWidget.registerCharacter('wukong', wukong);
+    new SakanaWidget({ character: 'wukong',rod: false }).mount('#sakana-widget');
   }
 </script>
 <script
