@@ -2,7 +2,7 @@ title: ZoZou Gallery
 author: ZoZou
 email: 664412383@qq.com
 description: >-
-  黑神话：悟空图集
+  黑神话：悟空 图集
 
 social:
   twitter: zozou_02
@@ -17,25 +17,3 @@ plugins:
 collections:
   images:
     output: true
-
-comments: 
-  # Global switch for the post comment system. Keeping it empty means disabled.
-  provider: giscus # [disqus | utterances | giscus]
-  # The provider options are as follows:
-  disqus:
-    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
-  utterances:
-    repo: # <gh-username>/<repo>
-    issue_term: # < url | pathname | title | ...>
-  # Giscus options › https://giscus.app
-  giscus:
-    repo: ZoZou02/gallery # <gh-username>/<repo>
-    repo_id: R_kgDOMnrAtQ
-    category: Show and tell
-    category_id: DIC_kwDOMnrAtc4Ch9O7
-    mapping: pathname # optional, default to 'pathname'
-    strict: # optional, default to '0'
-    input_position: # optional, default to 'bottom'
-    lang: zh-CN # optional, default to the value of `site.lang`
-    reactions_enabled: # optional, default to the value of `1`

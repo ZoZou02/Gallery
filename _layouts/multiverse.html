@@ -13,6 +13,8 @@
       {%- include header.html -%}
 
       <div id="main">
+        {%- include sakana.html -%}
+
         {% for image in site.images %}
 
         <article class="thumb">
@@ -21,7 +23,7 @@
           </a>
           <h2>{{ image.title }}</h2>
           <p>{{ image.caption }}</p>
-        {%- include sakana.html -%}
+        
 
         </article>
         {% endfor %}
