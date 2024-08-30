@@ -1455,6 +1455,7 @@ input, select, textarea {
 
 	body {
 		padding: 0 0 4em 0;
+		overflow-x: hidden;
 	}
 
 	#header {
