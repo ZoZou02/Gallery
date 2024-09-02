@@ -53,12 +53,12 @@ def resize_images(src_dir, dest_dir, size=(634, 1268)):
 
 def make_markdown(img_name):
     """创建md文件"""
-    content = """
-    ---
-    title: 
-    caption: 
-    ---
-    """
+
+    content = """---
+title: 
+caption: 
+---
+"""
     file_num = '00'
     if img_name.lower().endswith('.jpg'):
         file_num = img_name[:-4]
