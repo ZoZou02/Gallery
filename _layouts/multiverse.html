@@ -1,65 +1,60 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "zh-CN" }}">
+<html lang="{{ page.lang | default: site.lang | default: " zh-CN" }}">
 
-  {%- include head.html -%}
-  
+{%- include head.html -%}
 
 
-  <body class="is-preload">
-    
 
-    <div id="wrapper">
+<body class="is-preload">
 
-      {%- include header.html -%}
 
-      <div id="main">
-        {%- include sakana.html -%}
+  <div id="wrapper">
 
-        {% for image in site.images %}
+    {%- include header.html -%}
 
-        <article class="thumb">
-          <a href="{{site.baseurl}}/assets/images/fulls/{{ image.path | split: '/' | last | split: '.' | first }}.jpg" class="image">
-            <img src="{{site.baseurl}}/assets/images/thumbs/{{ image.path | split: '/' | last | split: '.' | first }}.jpg" alt="{{ image.title }}" />
-          </a>
-          <h2>{{ image.title }}</h2>
-          <p>{{ image.caption }}</p>
-        
+    <div id="main">
+      {%- include sakana.html -%}
 
-        </article>
-        {% endfor %}
+      {% for image in site.images %}
 
-        <!-- no idea where to put this... -->
-        <!-- {{ content }} -->
+      <article class="thumb">
+        <a href="{{site.baseurl}}/assets/images/fulls/{{ image.path | split: '/' | last | split: '.' | first }}.jpg"
+          class="image">
+          <img src="{{site.baseurl}}/assets/images/thumbs/{{ image.path | split: '/' | last | split: '.' | first }}.jpg"
+            alt="{{ image.title }}" />
+        </a>
+        <h2>{{ image.title }}</h2>
+        <p>{{ image.caption }}</p>
 
-      </div>
 
-      {%- include footer.html -%}
-        <script src="https://giscus.app/client.js"
-        data-repo="ZoZou02/gallery"
-        data-repo-id="R_kgDOMnrAtQ"
-        data-category="Show and tell"
-        data-category-id="DIC_kwDOMnrAtc4Ch9O7"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="noborder_gray"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-        </script>
+      </article>
+      {% endfor %}
+
+      <!-- no idea where to put this... -->
+      <!-- {{ content }} -->
 
     </div>
 
-    <script src="{{ 'assets/js/jquery.min.js' | relative_url }}"></script>
-    <script src="{{ 'assets/js/jquery.poptrox.min.js' | relative_url }}"></script>
-    <script src="{{ 'assets/js/browser.min.js' | relative_url }}"></script>
-    <script src="{{ 'assets/js/breakpoints.min.js' | relative_url }}"></script>
-    <script src="{{ 'assets/js/util.js' | relative_url }}"></script>
-    <script src="{{ 'assets/js/main.js' | relative_url }}"></script>
+    {%- include footer.html -%}
+    <div class="comment">
+      <script src="https://giscus.app/client.js" data-repo="ZoZou02/gallery" data-repo-id="R_kgDOMnrAtQ"
+        data-category="Show and tell" data-category-id="DIC_kwDOMnrAtc4Ch9O7" data-mapping="pathname" data-strict="0"
+        data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="noborder_gray"
+        data-lang="zh-CN" crossorigin="anonymous" async>
+        </script>
+    </div>
 
 
-  </body>
+  </div>
+
+  <script src="{{ 'assets/js/jquery.min.js' | relative_url }}"></script>
+  <script src="{{ 'assets/js/jquery.poptrox.min.js' | relative_url }}"></script>
+  <script src="{{ 'assets/js/browser.min.js' | relative_url }}"></script>
+  <script src="{{ 'assets/js/breakpoints.min.js' | relative_url }}"></script>
+  <script src="{{ 'assets/js/util.js' | relative_url }}"></script>
+  <script src="{{ 'assets/js/main.js' | relative_url }}"></script>
+
+
+</body>
 
 </html>
