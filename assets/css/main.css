@@ -1606,6 +1606,11 @@ input, select, textarea {
 		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	}
 
+		.comment{
+			padding-left: 15%;
+			padding-right: 15%;
+		}
+
 		#main .thumb {
 			-moz-transition: opacity 1.25s ease-in-out;
 			-webkit-transition: opacity 1.25s ease-in-out;

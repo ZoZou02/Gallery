@@ -32,3 +32,6 @@ gem 'wdm', '~> 0.2.0'
 
 # Validate HTML output
 gem 'html-proofer'
+
+# paginate
+gem 'jekyll-paginate'

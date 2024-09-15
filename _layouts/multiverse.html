@@ -15,13 +15,14 @@
     <div id="main">
       {%- include sakana.html -%}
 
+
       {% for image in site.images %}
 
       <article class="thumb">
         <a href="{{site.baseurl}}/assets/images/fulls/{{ image.path | split: '/' | last | split: '.' | first }}.jpg"
           class="image">
-          <img src="{{site.baseurl}}/assets/images/thumbs/{{ image.path | split: '/' | last | split: '.' | first }}.jpg"
-            alt="{{ image.title }}" />
+          <img data-src="{{site.baseurl}}/assets/images/thumbs/{{ image.path | split: '/' | last | split: '.' | first }}.jpg"
+            alt="{{ image.title }}" class="lazyload"/>
         </a>
         <h2>{{ image.title }}</h2>
         <p>{{ image.caption }}</p>
@@ -30,10 +31,43 @@
       </article>
       {% endfor %}
 
+      <!-- {%- include paginator.html -%} -->
+
+
+
+
       <!-- no idea where to put this... -->
       <!-- {{ content }} -->
 
     </div>
+    
+    {{ paginator.total_pages }}
+    <!-- {% if paginator.total_pages > 1 %} -->
+    <div class="pagination">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+      {% else %}
+      <span>&laquo; Prev</span>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+      <em>{{ page }}</em>
+      {% elsif page == 1 %}
+      <a href="{{ '/' | relative_url }}">{{ page }}</a>
+      {% else %}
+      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+      {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+      {% else %}
+      <span>Next &raquo;</span>
+      {% endif %}
+    </div>
+    <!-- {% endif %} -->
+
 
     {%- include footer.html -%}
     <div class="comment">
@@ -53,6 +87,7 @@
   <script src="{{ 'assets/js/breakpoints.min.js' | relative_url }}"></script>
   <script src="{{ 'assets/js/util.js' | relative_url }}"></script>
   <script src="{{ 'assets/js/main.js' | relative_url }}"></script>
+  <script src="assets/js/lazysizes.min.js"></script>
 
 
 </body>
