@@ -1,12 +1,13 @@
 {% if include.src %}
-    {% capture img_src %}/assets/images/thumbs/{{ include.src | split: '/' | last | split: '.' | first }}.jpg{% endcapture %}
+{% capture img_src %}/assets/images/thumbs/{{ include.src | split: '/' | last | split: '.' | first }}.jpg{% endcapture
+%}
 
 
-    <!-- <a class="image" style="background-image: url({{include.base}}/assets/images/fulls/{{ include.src | split: '/' | last | split: '.' | first }}.jpg); cursor: pointer; outline: 0px;">
+<!-- <a class="image" style="background-image: url({{include.base}}/assets/images/fulls/{{ include.src | split: '/' | last | split: '.' | first }}.jpg); cursor: pointer; outline: 0px;">
         <img data-src="{{img_src | relative_url}}" class="lazyload" alt="{{include.alt | default:""}}" />
 
     </a> -->
-    <img data-src="{{img_src | relative_url}}" class="lazyload" alt="{{include.alt | default:""}}" />
+<img data-src="{{img_src | relative_url}}" class="lazyload" alt="{{include.alt | default:""}}" />
 
 
 {% endif %}
