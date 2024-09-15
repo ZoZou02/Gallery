@@ -1,5 +1,5 @@
 {% if include.src %}
-    {% capture img_src %}{{include.base}}/assets/images/thumbs/{{ include.src | split: '/' | last | split: '.' | first }}.jpg{% endcapture %}
+    {% capture img_src %}/assets/images/thumbs/{{ include.src | split: '/' | last | split: '.' | first }}.jpg{% endcapture %}
 
 
     <!-- <a class="image" style="background-image: url({{include.base}}/assets/images/fulls/{{ include.src | split: '/' | last | split: '.' | first }}.jpg); cursor: pointer; outline: 0px;">
