@@ -21,11 +21,12 @@
       <article class="thumb">
         <a href="{{site.baseurl}}/assets/images/fulls/{{ image.path | split: '/' | last | split: '.' | first }}.jpg"
           class="image">
-          <img src="{{site.baseurl}}/assets/images/thumbs/{{ image.path | split: '/' | last | split: '.' | first }}.jpg"
-            alt="{{ image.title }}" loading="lazy"/>
+          <!-- <img src="{{site.baseurl}}/assets/images/thumbs/{{ image.path | split: '/' | last | split: '.' | first }}.jpg"
+            alt="{{ image.title }}" loading="lazy"/> -->
+            {% include img.html base=site.baseurl src=image.path alt=image.title %}
+
             
         </a>
-            <!-- {% include img.html base=site.baseurl src=image.path alt=image.title %} -->
 
         <h2>{{ image.title }}</h2>
         <p>{{ image.caption }}</p>
