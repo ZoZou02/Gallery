@@ -168,6 +168,10 @@
 					if (!href
 					||	href.charAt(0) == '#')
 						return;
+				
+				// Get the corresponding image element (assuming it's a sibling or parent)
+				var $image = $this.closest('.thumb').find('.image');
+				var $image_img = $image.children('img');	
 
 				// Redirect on click.
 					$this
@@ -179,7 +183,8 @@
 							event.stopPropagation();
 
 							window.location.href = href;
-
+							 // Hide the image.
+							 $image_img.hide();
 						});
 
 			});
@@ -232,7 +237,7 @@
 						//	$image.css('background-position', x);
 
 					// Hide original img.
-						$image_img.hide();
+						//$image_img.hide();
 
 			});
 
