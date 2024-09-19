@@ -232,7 +232,7 @@
 						//	$image.css('background-position', x);
 
 					// Hide original img.
-						//$image_img.hide();
+						$image_img.hide();
 
 			});
 
