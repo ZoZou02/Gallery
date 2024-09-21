@@ -1652,6 +1652,12 @@ input, select, textarea {
 				width: 100%;
 			}
 
+			#main .thumb > .image img {
+				max-width: 120%;
+				max-height: 120%;
+				object-fit: cover;
+			}
+
 			#main .thumb > h2 {
 				pointer-events: none;
 				bottom: 1.875em;
