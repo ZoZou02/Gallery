@@ -1653,8 +1653,7 @@ input, select, textarea {
 			}
 
 			#main .thumb > .image img {
-				max-width: 120%;
-				max-height: 120%;
+				max-width: 100%;
 				object-fit: cover;
 			}
 
