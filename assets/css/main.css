@@ -1643,7 +1643,7 @@ input, select, textarea {
 				-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 				background-position: center;
 				background-repeat: no-repeat;
-				background-size: cover;
+				background-size: contain;
 				border: 0;
 				height: 100%;
 				left: 0;
@@ -1653,7 +1653,7 @@ input, select, textarea {
 			}
 
 			#main .thumb > .image img {
-				max-width: 100%;
+				max-width: 110%;
 				object-fit: cover;
 			}
 
